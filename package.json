@@ -48,7 +48,8 @@
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
-    "commit-msg": "pnpm commitlint --edit ${1}"
+    "commit-msg": "pnpm commitlint --edit ${1}",
+    "prepare": "pnpm build"
   },
   "lint-staged": {
     "*": "eslint --fix"
