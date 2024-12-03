@@ -23,7 +23,7 @@
     "lint:fix": "eslint . --cache --fix",
     "bumpp": "bumpp package.json packages/*/package.json docs/package.json",
     "pub:release": "cd packages/radix-vue && pnpm pub:release",
-    "postinstall": "echo ssssss"
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
