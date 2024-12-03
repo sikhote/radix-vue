@@ -22,8 +22,7 @@
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
     "bumpp": "bumpp package.json packages/*/package.json docs/package.json",
-    "pub:release": "cd packages/radix-vue && pnpm pub:release",
-    "postinstall": "npm run build-only"
+    "pub:release": "cd packages/radix-vue && pnpm pub:release"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
@@ -49,7 +48,8 @@
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
-    "commit-msg": "pnpm commitlint --edit ${1}"
+    "commit-msg": "pnpm commitlint --edit ${1}",
+    "prepare": "npm run build-only"
   },
   "lint-staged": {
     "*": "eslint --fix"
